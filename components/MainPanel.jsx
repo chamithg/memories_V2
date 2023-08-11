@@ -19,6 +19,13 @@ const MainPanel = () => {
 
   return (
     <div className="mt-10 flex flex-col items-center ">
+      <Image
+        src="/assets/images/memories.png"
+        alt="logo"
+        className="rounded-full m-2"
+        width={300}
+        height={300}
+      />
       {!session?.user && (
         <div>
           <button

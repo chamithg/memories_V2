@@ -32,7 +32,7 @@ const AlbumIcon = ({
           <ShareAlbum shareMode={shareMode} setShareMode={setShareMode} />
         )}
       </div>
-      <div className="mt-5 static prompt_card transition-all flex flex-col items-center">
+      <div className="relative mt-5 prompt_card transition-all flex flex-col items-center">
         {!viewMode && (
           <div className="z-50 absolute top-3 right-3">
             {editMode ? (
@@ -73,7 +73,7 @@ const AlbumIcon = ({
         <div className="group">
           <Image
             onClick={handleClick}
-            className="rounded transition-all duration-700 group-hover:scale-105 w-full"
+            className="rounded transition-all duration-700 group-hover:scale-105 overflow-hidden w-full"
             width={400}
             height={400}
             src={data?.coverImage}
@@ -87,7 +87,7 @@ const AlbumIcon = ({
               </h1>
             </div>
           )}
-          <div className="absolute transition-all duration-700  top-full -translate-y-12 group-hover:-translate-y-full bg-gradient-to-t from-gray-500 bg-opacity-25    group-hover:bg-opacity-75 group-hover:bg-gray-700 items-start w-fit overflow-hidden p-2">
+          <div className="absolute transition-all duration-700  top-full -translate-y-12 group-hover:-translate-y-full bg-gradient-to-t from-gray-500 bg-opacity-25 group-hover:bg-opacity-75 group-hover:bg-gray-700 items-start w-full overflow-hidden p-2">
             <div className="flex  text-sm lg:text-3xl text-indigo-100 mb-3 top-5 font-semibold drop-shadow-2xl font-satoshi capitalize justify-center  text-center">
               {data?.albumname}
             </div>

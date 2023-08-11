@@ -27,15 +27,15 @@ const ImageThumb = ({
 
   return (
     <div>
-      <div className="relative shadow-xl transition-all delay-700 w-full h-auto overflow-hidden rounded-lg  flex flex-col items-center">
+      <div className="relative mt-5 prompt_card transition-all flex flex-col items-center">
         <div className="z-30 absolute bottom-3  left-3 flex flex-col gap-2 backdrop-blur-lg p-0.5 rounded-lg">
           <div
-            className="flex items-center gap-2"
+            className="flex z-30 items-center gap-2"
             onClick={() => likeImage(image._id)}>
             {image.likes.includes(session.user.id) ? (
-              <AiFillHeart className=" transition-all delay-200 w-6 h-6 hover:scale-105 text-red-600" />
+              <AiFillHeart className="z-30 transition-all delay-200 w-6 h-6 hover:scale-105 text-red-600" />
             ) : (
-              <AiOutlineHeart className="text-gray-700 mix-blend-difference transition-all delay-200 w-6 h-6 hover:scale-105" />
+              <AiOutlineHeart className="z-30 text-gray-700 mix-blend-difference transition-all delay-200 w-6 h-6 hover:scale-105" />
             )}
             <h1 className="gray_gradient mix-blend-difference">
               {image.likes.length}
@@ -71,7 +71,7 @@ const ImageThumb = ({
             <div className="z-30">
               {!viewMode && (
                 <button
-                  className="z-100 hover:scale-105  hover:bg-blue-200 transition-all glassmorphism_4_1"
+                  className="z-30 hover:scale-105  hover:bg-blue-200 transition-all glassmorphism_4_1"
                   onClick={() => setEditMode(!editMode)}>
                   <PiDotsThreeOutlineVerticalFill />
                 </button>
@@ -86,10 +86,10 @@ const ImageThumb = ({
           </h1>
         </div>
 
-        <Image
-          className="rounded transition-all w-full duration-700 hover:scale-105"
-          width={300}
-          height={300}
+        <img
+          className="transition-all w-full h-fit duration-700 hover:scale-105"
+          // width={auto}
+          // height={auto}
           src={image.image}
           alt="uploaded_images"
         />

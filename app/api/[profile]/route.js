@@ -27,8 +27,6 @@ export const GET = async (request, { params }) => {
       }
     }
 
-    console.log(sharedAlbums);
-
     return new Response(
       JSON.stringify({ albums: albums, sharedAlbums: sharedAlbums }),
       {

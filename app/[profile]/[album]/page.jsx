@@ -51,7 +51,7 @@ const Album = () => {
   }, [viewCreate, viewDelete, viewEdit]);
 
   return (
-    <div className="w-screen-2/3 mt-16 lg:mt-32 flex flex-col items-center">
+    <div className="w-full mt-16 lg:mt-32 flex flex-col items-center">
       {loading && (
         <div className="flex gap-2 justify-center items-center">
           <Loading />
@@ -76,7 +76,7 @@ const Album = () => {
       )}
       {albumName && (
         <div className="">
-          <h1 className="p-2 pink_gradient font-chewy text-5xl">
+          <h1 className="pink_gradient font-chewy text-5xl pb-3">
             Album : {albumName}
           </h1>
         </div>
@@ -99,7 +99,7 @@ const Album = () => {
         <div>
           {!viewMode && (
             <button
-              className="grad_btn fixed bottom-3 left-screen/2 -translate-x-1/2 shadow-2xl"
+              className="z-40 grad_btn fixed bottom-3 left-screen/2 -translate-x-1/2 shadow-2xl"
               onClick={() => setViewCreate(true)}>
               {" "}
               + Add New Collection
